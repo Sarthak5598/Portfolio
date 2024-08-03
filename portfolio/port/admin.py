@@ -14,6 +14,7 @@ class HireMeAdmin(admin.ModelAdmin):
         'email',
         'salary',
         'currency',
+        'pay_type',
     )
 
 admin.site.register(Hire_me,HireMeAdmin)

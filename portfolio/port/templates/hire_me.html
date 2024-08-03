@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <style>
-    /* styles.css */
     body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -64,6 +62,38 @@
     button[type="submit"]:hover {
         background-color: #45a049;
     }
+
+    .salary-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between the inputs */
+    }
+
+    .salary-container input[type="number"],
+    .salary-container select,
+    .salary-container input[type="text"] {
+        flex: 1; /* Allow inputs to grow and shrink */
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .salary-container input[type="number"] {
+        max-width: 150px; /* Limit the width of the number input */
+    }
+
+    .salary-container select {
+        max-width: 120px; /* Limit the width of the select dropdown */
+    }
+
+    .salary-container input[type="text"]#currency {
+        max-width: 100px; /* Limit the width of the currency input */
+    }
+
+    .salary-container input[type="number"] {
+        margin-right: 10px; /* Space between the number input and the select dropdown */
+    }
+
 </style>
 <body>
     <div id="sidebar">{% include "website/sidebar.html" %}</div>
@@ -96,8 +126,15 @@
             <input type="email" id="email" name="email">
 
             <label for="salary">Annual Package/ Pay per Hour/ Pay per Project (please mention the currency):</label>
-            <input type="number" id="salary" name="salary" step="0.01">
-            <input type="text" id="currency" name="currency" placeholder="Currency">
+            <div class="salary-container">
+                <input type="number" id="salary" name="salary" step="5">
+                <select id="pay_type" name="pay_type">
+                    <option value="/hr">/hr</option>
+                    <option value="/project">/project</option>
+                    <option value="/annum">/annum</option>
+                </select>
+                <input type="text" id="currency" name="currency" placeholder="Currency">
+            </div>
             
             <button type="submit">Submit</button>
         </form>
