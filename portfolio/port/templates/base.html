@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    /* Page content styles */
+    .main-content {
+        margin-left: 200px; /* Offset content by the sidebar width */
+        padding: 20px;
+    }
+
+    header {
+        background: #333;
+        color: #fff;
+        padding-top: 30px;
+        min-height: 70px;
+        border-bottom: #ccc 3px solid;
+        position: relative;
+        z-index: 1; /* Ensure header is above content */
+    }
+
+    header h1 {
+        text-align: center;
+        margin: 0;
+        font-size: 2em;
+    }
+
+    .about-me {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-me h2 {
+        color: #333;
+    }
+
+    .about-me p {
+        font-size: 1.1em;
+        color: #666;
+        line-height: 1.5;
+    }
+
+    footer {
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+        bottom: 0;
+        width: full /* Adjust width to account for the sidebar */
+    }
+    </style>
+</head>
+<body>
+    <div class="sidenav">
+        {% include "website/sidebar.html" %}
+    </div>
+    
+    <div class="main-content">
+        <header>
+            <h1>ABOUT ME</h1>
+        </header>
+
+        <section class="about-me">
+            <h2>About Me</h2>
+            <p>Hello! I'm Sarthak, a Full Stack Developer currently in my fourth year at Graphic Era University, Dehradun. I’m actively working on a Google Summer of Code (GSoC) project where I focus on enhancing Django-based solutions and integrating advanced features. My expertise spans Python, Django, and JavaScript, with a proven track record of developing optimized and secure applications.</p>
+            <p>My journey has particularly fueled my passion for backend development. Projects like implementing IP blockers and upvote/downvote functionalities similar to Reddit have deepened my interest in building robust backend systems. These experiences have shown me the power of backend logic in enhancing application security and user interaction, driving my enthusiasm for crafting scalable and efficient backend solutions.</p>
+            <p>In addition to my GSoC project, I’ve been deeply involved in open source development. I have contributed to various projects, including the development of a comprehensive Django-based Bidding system for OWASP-BLT, which significantly increased engagement and improved transaction security.</p>
+            <p>Currently, I’m exploring new technologies and looking for opportunities to work with clients on exciting projects. Whether you need a reliable developer for a full stack project, assistance with Django applications, or someone to enhance your backend systems, I'm eager to collaborate and bring your ideas to life.</p>
+            <p>In my spare time, I enjoy staying updated with the latest trends in software development, exploring new technologies, and contributing to open source projects. I’m always eager to learn and grow, and I look forward to sharing my journey and projects with you!</p>
+            <p>Feel free to connect with me through my <a href="https://github.com/Sarthak5598">GitHub</a> or <a href="https://www.linkedin.com/in/sarthak-sharma-b848b0228">LinkedIn</a> profiles, or check out my latest work and projects!</p>
+        </section>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 My Website</p>
+        </footer>
+    </div>
+</body>
+</html>
