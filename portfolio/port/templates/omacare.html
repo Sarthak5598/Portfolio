@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap">
+    <style>
+        body {
+            background-image: url("{% static 'img/background.jpg' %}"); /* Background image */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the image */
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* Align content in a column */
+            align-items: center; /* Center horizontally */
+            justify-content: flex-start; /* Align at the top */
+            height: 100vh; /* Full viewport height */
+        }
+        .container {
+            display: flex;
+            flex-direction: column; /* Align items in a column */
+            align-items: center; /* Center horizontally */
+            padding: 20px; /* Adjust as needed */
+            margin-top: 20px; /* Space from the top */
+            background-color: rgba(139, 79, 201, 0.7); /* Translucent purple background */
+            border-radius: 8px; /* Rounded corners */
+            width: fit-content; /* Adjust width to content */
+        }
+        .header-content {
+            display: flex;
+            align-items: center; /* Align items vertically in the center */
+        }
+        #logo {
+            width: 150px;
+            height: 150px;
+            margin-right: 10px; /* Space between logo and company name */
+        }
+        #company_name {
+            color: white;
+            margin: 0;
+            font-size: 3rem;
+            font-family: 'Playfair Display', serif; 
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .powered-by {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column; /* Stack text and logo vertically */
+            align-items: center; /* Center horizontally */
+            font-size: 1rem;
+            color: white;
+        }
+        .powered-by p {
+            margin: 0;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight:600; /* Space between text and logo */
+        }
+        .powered-by img {
+            width: 100px; /* Smaller size for the ylogo */
+        }
+        .welcome-section {
+            background-color: rgba(240, 240, 240, 0.9); /* Semi-transparent light grey background */
+            color: #333; /* Darker text color for contrast */
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 600px;
+        }
+        .welcome-section h1 {
+            color: #8b4fc9; /* Match the purple background */
+            margin: 0;
+            font-size: 2rem;
+        }
+        .welcome-section p {
+            margin: 10px 0;
+            font-size: 1.1rem; /* Slightly larger font size */
+            line-height: 1.5; /* Increase line height for readability */
+            color: #333; /* Slightly lighter text color */
+            font-weight: 600; /* Regular weight for body text */
+        }
+        .btn {
+            background-color: #8b4fc9; /* Purple background */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            margin-right: 10px; /* Space between buttons */
+        }
+        .btn:hover {
+            background-color: #7a3e9e; /* Darker purple on hover */
+        }
+        .contact-btn {
+            background-color: #8b4fc9; /* Purple background */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            margin-right: 10px; /* Gray background for Contact Us */
+        }
+        .contact-btn:hover {
+            background-color: #7a3e9e; /* Darker gray on hover */
+        }
+        .additional-info {
+            background-color: #e0e0e0; /* Light grey background to match the welcome section */
+            color: #333; /* Darker text color for contrast */
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 600px;
+        }
+        .additional-info p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-content">
+            <img id="logo" src="{% static 'img/logo.png' %}" alt="Logo">
+            <label id="company_name">OMA CARE</label>
+        </div>
+    </div>
+    
+    <div class="powered-by">
+        <p>Backed by</p>
+        <img src="{% static 'img/ylogo.png' %}" alt="Y Logo">
+    </div>
+
+    <div class="welcome-section">
+        <h1>Welcome to Oma Care</h1>
+        <p>Get paid for taking care of your loved ones</p>
+        <p>Oma Care is reshaping the caregiver experience.</p>
+        <br>
+        <p>
+            <a href="#waitlist" class="btn">Join our Waitlist</a>
+            <a href="#contact" class="btn contact-btn">Contact Us</a>
+        </p>
+    </div>
+</body>
+</html>

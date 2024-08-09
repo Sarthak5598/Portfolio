@@ -13,7 +13,7 @@ def projects(request):
     return render(request,'projects.html')
 
 def stalk_me(request):
-    return render(request,'stalk_me.html')
+    return render(request,'omacare.html')
 
 def hire_me(request):
     #TODO : ADD A Email system to send details to myself 
