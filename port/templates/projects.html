@@ -5,8 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    /* Base styles for the body */
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    /* Style for the main content area */
+    #main-content {
+        margin-left: 200px; /* Offset content by the sidebar width */
+        padding: 20px;
+    }
+
+    /* Styles for the block around each link */
+    .project-block {
+        background-color: #ffffff; /* White background for the block */
+        border: 1px solid #cccccc; /* Light grey border */
+        border-radius: 10px; /* Rounded corners */
+        padding: 15px; /* Padding inside the block */
+        margin-bottom: 20px; /* Space between blocks */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        text-decoration: none; /* Remove underline from link */
+        color: inherit; /* Inherit color from surrounding text */
+        display: block; /* Make the entire block clickable */
+    }
+
+    /* Style for the title inside the block */
+    .project-block b label {
+        font-size: 18px; /* Slightly larger font for the title */
+        color: #333333; /* Dark grey color for the text */
+    }
+
+    /* Style for the paragraph inside the block */
+    .project-block p {
+        color: #666666; /* Medium grey color for the paragraph */
+        margin-top: 10px; /* Space between the title and paragraph */
+    }
+
+    /* Add a hover effect for better UX */
+    .project-block:hover {
+        background-color: #f0f0f0; /* Slight background change on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    }
+</style>
 <body>
     Projects
-    {%include "website/sidebar.html" %}
+    {% include "website/sidebar.html" %}
+    <div id="main-content">
+        <a href="https://www.github.com/Sarthak5598" class="project-block">
+            <b><label>Data Management System: A Smarter Way to Organize and Track Your Data</label></b> 
+            <p>Our data management system offers an intuitive and efficient solution for organizing, tracking, and managing your data. Designed with the modern user in mind, it simplifies the process of data storage, retrieval, and analysis, ensuring that you can access and work with your data seamlessly.</p>
+        </a>
+        <a href="https://www.github.com/Sarthak5598" class="project-block">
+            <b><label>URL Shortner</label></b> 
+            <p>Simplify your long and cumbersome URLs with our easy-to-use URL shortener. Convert lengthy links into short, manageable URLs that are perfect for sharing and tracking.</p>
+        </a>
+        <a href="https://www.github.com/Sarthak5598" class="project-block">
+            <b><label>Air Pollution Prediction</label></b> 
+            <p>Our Air Pollution Prediction system uses advanced algorithms to forecast pollution levels based on various environmental factors. With accurate and timely predictions, you can take proactive measures to mitigate the impact of air pollution on your health and the environment.</p>
+        </a>        
+    </div>
 </body>
 </html>
